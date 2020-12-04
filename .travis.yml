@@ -46,31 +46,6 @@ android:
 before_install:
 - openssl aes-256-cbc -K $encrypted_1f39e1523faf_key -iv $encrypted_1f39e1523faf_iv -in secrets.tar.enc -out secrets.tar -d
 - tar xvf secrets.tar
-=======
-      - master
-      - develop
-
-env:
-  matrix:
-    - ANDROID_TARGET=android-26 ANDROID_ABI=armeabi-v7a
-
-android:
-  components:
-    - tools
-    - platform-tools
-    - ${ANDROID_TARGET}
-    - build-tools-26.0.1
-    - extra-android-support
-    - extra-android-m2repository
-    - extra-google-m2repository
-    - extra-google-google_play_services
-    - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
-
-licenses:
-    - '.+'
-
-before_install:
->>>>>>> main
 #    - sudo apt-get update
 
 install:
