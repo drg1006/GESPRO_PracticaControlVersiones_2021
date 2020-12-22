@@ -1,18 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 language: android
 sudo: required
 jdk: oraclejdk8
 =======
 sudo: required
+=======
+>>>>>>> main
 language: android
+sudo: required
 jdk: oraclejdk8
+<<<<<<< HEAD
 compiler: gcc
+>>>>>>> main
+=======
 >>>>>>> main
 
 addons:
   sonarqube:
     branches:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
     - master
     - develop
 
@@ -68,6 +78,7 @@ before_script:
 #    - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD/opencv_lib/
     - chmod +x gradlew
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 script:
     # Compile and run lint
@@ -79,6 +90,12 @@ script:
 script:
     # Compile and run unit tests
     - ./gradlew assembleDebug lint
+>>>>>>> main
+=======
+
+script:
+    # Compile and run lint
+    - ./gradlew clean assembleProdRelease lint --stacktrace
 >>>>>>> main
     # Run test coverage report
 #    - ./gradlew jacocoTestMockDebugUnitTestReport
@@ -97,10 +114,14 @@ after_success:
 #    - bash <(curl -s https://codecov.io/bash)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
+<<<<<<< HEAD
 cache:
   directories:
     - $HOME/.gradle/caches/
@@ -114,4 +135,12 @@ cache:
     - '$HOME/.sonar/cache'
     - '$HOME/.gradle'
     - '.gradle'
+>>>>>>> main
+=======
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache
+    - $HOME/.sonar/cache
 >>>>>>> main
